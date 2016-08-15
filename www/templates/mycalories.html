@@ -1,0 +1,16 @@
+<ion-view view-title="My Calories">
+  <ion-content class="test">
+    <!-- Card displaying total calories and total calories toady -->
+    <div class="card">
+      <div class="item item-text-wrap item-icon-left">
+        <i class="icon ion-pizza"></i>
+        Total Calories:  {{totalCalories}}<br>
+        Total Calories Today: {{totalCaloriesToday}}  
+      </div>
+    </div>  
+    
+    <!-- Button to calculate calories -->
+    <button class="button button-block button-dark" ng-click="calculateCalories()">Calculate Total Calories</button>
+    
+  </ion-content>
+</ion-view>

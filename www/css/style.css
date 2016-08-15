@@ -1,0 +1,26 @@
+/* Empty. Add your own CSS if you like */
+/*Reference for the code below: https://codepen.io/ibrahimjabbari/pen/ozinB*/
+hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #009ec3, #404040, #009ec3);
+  background-image: -moz-linear-gradient(left, #009ec3, #404040, #009ec3);
+  background-image: -ms-linear-gradient(left, #009ec3, #404040, #009ec3);
+  background-image: -o-linear-gradient(left, #009ec3, #404040, #009ec3); 
+}
+
+/*CSS for the list items */
+.item .item-content{
+    background-color:#444;
+    color: white;
+}
+
+/*Background color*/
+.test{
+    /* Reference: Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b7ea+0,009ec3+100;Blue+3D+%2315 */
+    background: #00b7ea; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #00b7ea 0%, #009ec3 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #00b7ea 0%,#009ec3 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #00b7ea 0%,#009ec3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

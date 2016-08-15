@@ -1,0 +1,36 @@
+<ion-view view-title="My Foods">
+  <ion-content class="test">
+    
+    <!-- A form to enter food name and amount of calories in the food. -->  
+    <div class="list list-inset">
+      <label class="item item-input item-dark">
+        <i class="icon ion-ios-nutrition placeholder-icon stable"></i>
+        <input type="text" placeholder="Food Name" ng-model="enterFoodDetails.foodName" style="color:white">
+      </label>
+      <label class="item item-input item-dark">
+        <i class="icon ion-calculator placeholder-icon stable"></i>
+        <input type="number" placeholder="Calorie Amount" ng-model="enterFoodDetails.calorieAmount" style="color:white">
+      </label>
+    </div>
+      
+    <!-- Button to add the object to the array -->  
+    <button class="button button-block button-dark" ng-click="addFood(enterFoodDetails.foodName, enterFoodDetails.calorieAmount)">Add Food</button>
+   
+    <hr class="style14">
+    
+    <!-- Displays a list of foods eaten, can slide to the left to reveal delete button (which deletes the current food) & Add Food button to add a food they have previously added -->  
+    <ion-list ng-repeat="food in foodEatenDatabase.foodsEaten"> 
+        <ion-item class="item item-text-warp item-dark item-icon-right">
+            <h4 style="text-align:center; color:white">{{ food.date | date:'MMMM d, h:mm a'}}</h4>
+            <h3 style="color:white">Food Name: {{ food.foodName}}</h3>
+            <h3 style="color:white">Calorie Amount: {{ food.foodCalories}}</h3>
+            <i class="icon ion-chevron-left icon-accessory"></i>
+            
+            <ion-option-button class="button-assertive" ng-click="deleteFood(food)">Delete</ion-option-button>
+            
+            <ion-option-button class="button-stable" ng-click="addFood(food.foodName, food.foodCalories)">Add Food</ion-option-button>
+        </ion-item>
+    </ion-list>
+      
+  </ion-content>
+</ion-view>
